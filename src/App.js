@@ -1,16 +1,17 @@
-import { useState } from "react";
+import { useState } from 'react';
+import { useInput } from './useInput';
+import UseState from './UseState';
 
-function App() {
-  const [item, setItem ] = useState(1);
-  const incrementItem = () => setItem(item + 1);
-  const decrementItem = () => setItem(item - 1);
-  
+const App = () => {
+  const maxLen = value => !value.includes("@");
+  const name = useInput("Mr.", maxLen);
+
   return (
     <div className="App">
-      <h1>Hello {item}</h1>
-      <h2>Start editing to see some magic happen!</h2>
-      <button onClick={incrementItem}>IncrementItem</button>
-      <button onClick={decrementItem}>DecrementItem</button>
+      {/* <UseState /> */}
+
+      <h1>Hello</h1>
+      <input placeholder="Name" value={name.value} />
     </div>
   );
 }
