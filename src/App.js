@@ -1,17 +1,14 @@
-import { useState } from 'react';
-import { useInput } from './useInput';
-import UseState from './UseState';
+// import { useState } from 'react';
+// import UseState from './UseState';
+// import Input from './Input';
+import Tabs from './Tabs';
 
 const App = () => {
-  const maxLen = value => !value.includes("@");
-  const name = useInput("Mr.", maxLen);
-
   return (
     <div className="App">
       {/* <UseState /> */}
-
-      <h1>Hello</h1>
-      <input placeholder="Name" value={name.value} />
+      {/* <Input /> */}
+      <Tabs />
     </div>
   );
 }
