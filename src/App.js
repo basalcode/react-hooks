@@ -1,32 +1,40 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 // import { useState } from 'react';
 // import UseState from './UseState';
 // import Input from './Input';
 // import Tabs from './Tabs';
+// import Title from './Title';
 
-const useTitle = (initialTitle) => {
-  const [title, setTitle] = useState(initialTitle);
-  const updateTitle = () => {
-    const htmlTitle = document.querySelector("title");
+const useClick = onClick =>  {
+  const element = useRef();
+  useEffect(() => {
+    if (element.current) {
+      element.current.addEventListener("click", onClick);
+    }
 
-    htmlTitle.innerText = title;
-  }
+    return () => {
+      if (element.current) {
+        element.current.removeEventListener("click", onClick);
+      }
+    }
+  }, []);
 
-  useEffect(updateTitle, [title]);
+  if (typeof onClick !== "function") return;
 
-  return setTitle;
+  return element;
 }
 
 const App = () => { 
-  const titleUpdater = useTitle("Loading...");
-  setTimeout(() => titleUpdater("Home"), 5000);
-
+  const sayHello = () => console.log("say hello");
+  const title = useClick(sayHello);
+  
   return (
     <div className="App">
+      <div ref={title}>hi</div>
       {/* <UseState /> */}
       {/* <Input /> */}
       {/* <Tabs /> */}
-      <div>Hi</div>
+      {/* <Title /> */}
     </div>
   );
 }
