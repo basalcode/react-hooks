@@ -5,9 +5,12 @@ import { useState, useEffect, useRef } from 'react';
 // import Tabs from './Tabs';
 // import Title from './Title';
 // import Click from './Click';
-import Hover from './Hover';
+// import Hover from './Hover';
+import Confirm from './Confirm';
 
 const App = () => {
+  
+
   return (
     <div className="App">
       {/* <UseState /> */}
@@ -15,7 +18,8 @@ const App = () => {
       {/* <Tabs /> */}
       {/* <Title /> */}
       {/* <Click /> */}
-      <Hover />
+      {/* <Hover /> */}
+      <Confirm />
     </div>
   );
 }
