@@ -4,7 +4,8 @@ import { useState, useEffect, useRef } from 'react';
 // import Input from './Input';
 // import Tabs from './Tabs';
 // import Title from './Title';
-import Click from './Click';
+// import Click from './Click';
+import Hover from './Hover';
 
 const App = () => {
   return (
@@ -13,7 +14,8 @@ const App = () => {
       {/* <Input /> */}
       {/* <Tabs /> */}
       {/* <Title /> */}
-      <Click />
+      {/* <Click /> */}
+      <Hover />
     </div>
   );
 }
