@@ -4,37 +4,16 @@ import { useState, useEffect, useRef } from 'react';
 // import Input from './Input';
 // import Tabs from './Tabs';
 // import Title from './Title';
+import Click from './Click';
 
-const useClick = onClick =>  {
-  const element = useRef();
-  useEffect(() => {
-    if (element.current) {
-      element.current.addEventListener("click", onClick);
-    }
-
-    return () => {
-      if (element.current) {
-        element.current.removeEventListener("click", onClick);
-      }
-    }
-  }, []);
-
-  if (typeof onClick !== "function") return;
-
-  return element;
-}
-
-const App = () => { 
-  const sayHello = () => console.log("say hello");
-  const title = useClick(sayHello);
-  
+const App = () => {
   return (
     <div className="App">
-      <div ref={title}>hi</div>
       {/* <UseState /> */}
       {/* <Input /> */}
       {/* <Tabs /> */}
       {/* <Title /> */}
+      <Click />
     </div>
   );
 }
