@@ -6,10 +6,12 @@ import { useState, useEffect, useRef } from 'react';
 // import Title from './Title';
 // import Click from './Click';
 // import Hover from './Hover';
-import Confirm from './Confirm';
+// import Confirm from './Confirm';
+import PreventLeave from './PreventLeave';
+
+
 
 const App = () => {
-  
 
   return (
     <div className="App">
@@ -19,7 +21,9 @@ const App = () => {
       {/* <Title /> */}
       {/* <Click /> */}
       {/* <Hover /> */}
-      <Confirm />
+      {/* <Confirm /> */}
+      <PreventLeave />
+
     </div>
   );
 }
