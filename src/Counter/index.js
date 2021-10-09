@@ -1,9 +1,7 @@
-import { useState } from "react";
+import { useCounter } from "./useCounter";
 
-const UseState = () => {
-    const [item, setItem] = useState(1);
-    const incrementItem = () => setItem(item + 1);
-    const decrementItem = () => setItem(item - 1);
+const Counter = () => {
+    const { item, incrementItem, decrementItem } = useCounter();
 
     return (
         <div>
@@ -15,4 +13,4 @@ const UseState = () => {
     );
 }
 
-export default UseState;
+export default Counter;
