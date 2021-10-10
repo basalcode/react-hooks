@@ -8,7 +8,8 @@ import { useState, useEffect, useRef } from 'react';
 // import Hover from './Hover/index';
 // import Confirm from './Confirm/index';
 // import PreventLeave from './PreventLeave/index';
-import BeforeLeave from './BeforeLeave/index';
+// import BeforeLeave from './BeforeLeave/index';
+import FadeIn from './FadeIn/index';
 
 const App = () => {
   return (
@@ -21,7 +22,8 @@ const App = () => {
       {/* <Hover /> */}
       {/* <Confirm /> */}
       {/* <PreventLeave /> */}
-      <BeforeLeave />
+      {/* <BeforeLeave /> */}
+      <FadeIn />
     </div>
   );
 }
