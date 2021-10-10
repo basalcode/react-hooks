@@ -9,7 +9,8 @@ import { useState, useEffect, useRef } from 'react';
 // import Confirm from './Confirm/index';
 // import PreventLeave from './PreventLeave/index';
 // import BeforeLeave from './BeforeLeave/index';
-import FadeIn from './FadeIn/index';
+// import FadeIn from './FadeIn/index';
+import Network from './Network/index';
 
 const App = () => {
   return (
@@ -23,7 +24,8 @@ const App = () => {
       {/* <Confirm /> */}
       {/* <PreventLeave /> */}
       {/* <BeforeLeave /> */}
-      <FadeIn />
+      {/* <FadeIn /> */}
+      <Network />
     </div>
   );
 }
