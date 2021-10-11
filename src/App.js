@@ -10,7 +10,8 @@ import { useState, useEffect, useRef } from 'react';
 // import BeforeLeave from './BeforeLeave/index';
 // import FadeIn from './FadeIn/index';
 // import Network from './Network/index';
-import Notification from './Notification';
+// import Notification from './Notification';
+import Axios from './Axios';
 
 const App = () => {
   return (
@@ -26,7 +27,8 @@ const App = () => {
       {/* <BeforeLeave /> */}
       {/* <FadeIn /> */}
       {/* <Network /> */}
-      <Notification />
+      {/* <Notification /> */}
+      <Axios />
     </div>
   );
 }
