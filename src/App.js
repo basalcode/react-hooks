@@ -1,6 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
 // import Counter from './Counter/index';
-
 // import Input from './Input/index';
 // import Tabs from './Tabs/index';
 // import Title from './Title/index';
@@ -10,7 +9,8 @@ import { useState, useEffect, useRef } from 'react';
 // import PreventLeave from './PreventLeave/index';
 // import BeforeLeave from './BeforeLeave/index';
 // import FadeIn from './FadeIn/index';
-import Network from './Network/index';
+// import Network from './Network/index';
+import Notification from './Notification';
 
 const App = () => {
   return (
@@ -25,7 +25,8 @@ const App = () => {
       {/* <PreventLeave /> */}
       {/* <BeforeLeave /> */}
       {/* <FadeIn /> */}
-      <Network />
+      {/* <Network /> */}
+      <Notification />
     </div>
   );
 }
