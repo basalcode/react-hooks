@@ -11,7 +11,7 @@ const content = [
     },
 ];
 
-const Tabs = () => {
+const Tab = () => {
     const { currentItem, changeItem } = useTab(0, content);
 
     return (
@@ -31,4 +31,4 @@ const Tabs = () => {
     );
 }
 
-export default Tabs;
+export default Tab;
