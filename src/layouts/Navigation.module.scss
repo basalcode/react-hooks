@@ -1,0 +1,41 @@
+.navigation {
+  width: inherit;
+}
+
+.lists {
+  display: grid;
+  place-content: center center;
+  grid-template-columns: repeat(auto-fill, 15%);
+  gap: 10px 15px;
+
+  width: inherit;
+}
+
+.list {
+  width: inherit;
+  height: inherit;
+
+  border-radius: 10px;
+  border: 1px solid black;
+
+  &:hover {
+    background-color: black;
+
+    transition: 0.5s background-color;
+    & > .link {
+      color: white;
+      transition: 0.5s color;
+    }
+  }
+}
+
+.link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: inherit;
+  height: inherit;
+
+  text-align: center;
+}
