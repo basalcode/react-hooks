@@ -1,9 +1,10 @@
 import { useState } from "react";
 
 export const useCounter = () => {
-    const [item, setItem] = useState(1);
-    const incrementItem = () => setItem(item + 1);
-    const decrementItem = () => setItem(item - 1);
+    const [number, setNumber] = useState(0);
+    const onIncrease = () => setNumber(number + 1);
+    const onDecrease = () => setNumber(number - 1);
+    const onReset = () => setNumber(0);
 
-    return { item, incrementItem, decrementItem };
+    return { number, onIncrease, onDecrease, onReset };
 }

@@ -1,0 +1,41 @@
+.counter {
+}
+
+.number_text {
+  margin: 0 2rem;
+
+  font-size: 10rem;
+
+  text-align: center;
+}
+
+.counter_buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.button {
+  width: 45px;
+  height: 45px;
+
+  border-radius: 50%;
+  background-color: lightgrey;
+
+  cursor: pointer;
+}
+
+.counter_buttons {
+}
+
+.descrease_button {
+}
+
+.initialize_button {
+  width: 100px;
+  border-radius: 10px;
+
+  margin: 0 10px;
+}
+
+.increase_button {
+}

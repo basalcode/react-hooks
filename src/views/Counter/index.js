@@ -1,14 +1,43 @@
 import { useCounter } from "./useCounter";
 
+import {
+    counter,
+    number_text,
+    counter_buttons,
+    button,
+    descrease_button,
+    increase_button,
+    initialize_button,
+} from './index.module.scss';
+
 const Counter = () => {
-    const { item, incrementItem, decrementItem } = useCounter();
+    const { number, onIncrease, onDecrease, onReset } = useCounter();
 
     return (
-        <div>
-            <h1>Hello {item}</h1>
-            <h2>Start editing to see some magic happen!</h2>
-            <button onClick={incrementItem}>IncrementItem</button>
-            <button onClick={decrementItem}>DecrementItem</button>
+        <div className={counter}>
+            <p className={number_text}>
+                {number}
+            </p>
+            <div className={counter_buttons}>
+                <button
+                    className={`${button} ${descrease_button}`}
+                    onClick={onDecrease}
+                >
+                    ➖
+                </button>
+                <button
+                    className={`${button} ${initialize_button}`}
+                    onClick={onReset}
+                >
+                    ✅
+                </button>
+                <button
+                    className={`${button} ${increase_button}`}
+                    onClick={onIncrease}
+                >
+                    ➕
+                </button>
+            </div>
         </div>
     );
 }
