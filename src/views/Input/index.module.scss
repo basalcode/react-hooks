@@ -1,0 +1,28 @@
+.input {
+}
+
+.inputTextContainer {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  border: 1px solid black;
+}
+
+.title {
+  margin-right: 15px;
+}
+
+.inputText {
+  padding: 10px 15px;
+
+  border-radius: 5px;
+
+  border: 1px solid black;
+}
+
+.inputWarning {
+  border: 1px solid black;
+  text-align: center;
+}
