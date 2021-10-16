@@ -1,31 +1,67 @@
 import { useTab } from './useTab';
+import { tab, tabButtons, tabButton, tabButtonOn, tabButtonText, imageContainer, image } from './index.module.scss';
 
-const content = [
+const tabs = [
     {
-        tab: "Section 1",
-        content: "I'm the content of the Section 1"
+        title: "Arctic",
+        src: "/image/arctic.jpg",
+        alt: "극지방"
     },
     {
-        tab: "Section 2",
-        content: "I'm the content of the Section 2"
+        title: "Beach",
+        src: "image/beach.jpg",
+        alt: "해변"
+    },
+    {
+        title: "Desert",
+        src: "image/desert.jpg",
+        alt: "사막"
+    },
+    {
+        title: "Jungle",
+        src: "image/jungle.jpg",
+        alt: "정글"
+    },
+    {
+        title: "Mountain",
+        src: "image/mountain.jpg",
+        alt: "산"
+    },
+    {
+        title: "Plain",
+        src: "image/plain.jpg",
+        alt: "평원"
     },
 ];
 
 const Tab = () => {
-    const { currentItem, changeItem } = useTab(0, content);
+    const { currentItem, changeItem, currentIndex } = useTab(0, tabs);
 
     return (
-        <div>
-            {content.map((section, index) => (
-                <button
-                    onClick={() => changeItem(index)}
-                    key={index}
-                >
-                    {section.tab}
-                </button>
-            ))}
-            <div>
-                {currentItem.content}
+        <div className={tab}>
+            <div
+                className={tabButtons}
+            >
+                {tabs.map((tab, index) => (
+                    <button
+                        className={`${tabButton} ${currentIndex === index && tabButtonOn}`}
+                        key={index}
+                        onClick={event => changeItem(index)}
+                    >
+                        <p
+                            className={tabButtonText}
+                        >
+                            {tab.title}
+                        </p>
+                    </button>
+                ))}
+            </div>
+            <div className={imageContainer}>
+                <img
+                    className={image}
+                    src={currentItem.src}
+                    alt={currentItem.alt}
+                />
             </div>
         </div>
     );

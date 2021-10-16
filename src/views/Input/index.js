@@ -27,7 +27,9 @@ const Input = () => {
             </div>
             <p className={inputWarning}>
                 {isValid
-                    ? ""
+                    ? value.length === 0
+                        ? ""
+                        : "정상적인 입력입니다!"
                     : "영문 및 띄어쓰기만 입력할 수 있습니다."
                 }
             </p>
