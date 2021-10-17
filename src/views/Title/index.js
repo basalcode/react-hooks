@@ -1,11 +1,23 @@
 import { useTitle } from "./useTitle";
 
+import { title, titleText, resetButton } from './index.module.scss';
+
 const Title = () => {
-    const titleUpdater = useTitle("Loading...");
-    setTimeout(() => titleUpdater("Home"), 5000);
+    const setTitle = useTitle("Loading...");
+    setTimeout(() => setTitle("Home"), 2000);
 
     return (
-        <div>Look at the title above</div>
+        <div className={title}>
+            <h1 className={titleText}>
+                Look at the title above
+            </h1>
+            <button
+                className={resetButton}
+                onClick={event => setTitle("Loading...")}
+            >
+                Restart
+            </button>
+        </div>
     );
 }
 

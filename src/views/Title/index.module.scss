@@ -1,0 +1,19 @@
+.title {
+}
+
+.titleText {
+}
+
+.resetButton {
+  width: 150px;
+  height: 40px;
+
+  border: 1px solid black;
+  border-radius: 10px;
+
+  &:hover {
+    background-color: black;
+    color: white;
+    transition: background-color 0.5s, color 0.5s;
+  }
+}
