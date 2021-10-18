@@ -1,15 +1,20 @@
-export const useConfirm = (message = "", onConfirm, onCancel) => {
-    if (onConfirm && typeof onConfirm !== "function") return;
+import { useState } from "react";
 
-    if (onCancel && typeof onCancel !== "function") return;
-  
-    const confirmAction = () => {
-      if (window.confirm(message)) {
-        onConfirm();
-      } else {
-        onCancel();
-      }
+export const useConfirm = (message = "", onConfirm, onCancel) => {
+  // const [isConfirmed, setIsConfirmed] = useState(false);
+
+  if (onConfirm && typeof onConfirm !== "function") return;
+  if (onCancel && typeof onCancel !== "function") return;
+
+  const confirmAction = () => {
+    if (window.confirm(message)) {
+      // setIsConfirmed(true);
+      onConfirm();
+    } else {
+      // setIsConfirmed(false);
+      onCancel();
     }
-  
-    return confirmAction;
   }
+
+  return confirmAction;
+}

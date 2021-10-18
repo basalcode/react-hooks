@@ -1,0 +1,53 @@
+.confirm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.confirm_button {
+  width: 100px;
+  height: 40px;
+
+  border: 1px solid black;
+  border-radius: 10px;
+
+  &:hover {
+    transition: background-color 0.2s, color 0.2s;
+
+    background-color: black;
+    color: white;
+  }
+}
+
+.confirm_result {
+  display: flex;
+  justify-content: space-evenly;
+
+  width: 100%;
+}
+
+.confirm_result_content {
+  border-radius: 10px;
+  padding: 0 20px;
+  opacity: 0;
+
+  transition: opacity 0.5s;
+}
+
+.selected {
+  opacity: 1;
+}
+
+.confirmed {
+  background-color: lightgreen;
+}
+
+.confirmed_text {
+}
+
+.canceled {
+  background-color: lightsalmon;
+}
+
+.canceledText {
+}
