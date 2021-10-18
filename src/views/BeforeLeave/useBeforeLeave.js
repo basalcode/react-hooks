@@ -1,15 +1,7 @@
 import { useEffect } from "react";
 
 export const useBeforeLeave = (onBefore) => {
-    const handle = (event) => {
-        const { clientY } = event;
-        
-        // if (clientY <= 0) {
-        //     onBefore();
-        // }
-
-        onBefore();
-    }
+    const handle = (event) => onBefore();
 
     useEffect(() => {
         document.addEventListener("mouseleave", handle);

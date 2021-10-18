@@ -1,13 +1,17 @@
 export const usePreventLeave = () => {
-    const listener = (event) => {
-      event.preventDefault();
-      event.returnValue = "";
-    }
-    const enablePrevent = () => window.addEventListener("beforeunload", listener)
-    const disablePrevent = () => window.removeEventListener("beforeunload", listener);
-  
-    return {
-      enablePrevent,
-      disablePrevent
-    }
+  const listener = (event) => {
+    event.preventDefault();
+    event.returnValue = "";
   }
+  const enablePrevent = () => {
+    window.onbeforeunload = listener;
+  }
+  const disablePrevent = () => {
+    window.onbeforeunload = null;
+  }
+
+  return {
+    enablePrevent,
+    disablePrevent
+  }
+}
