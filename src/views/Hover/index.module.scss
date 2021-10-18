@@ -1,0 +1,32 @@
+.hover {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hoverButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 1px solid black;
+  width: 200px;
+  height: 40px;
+
+  border-radius: 10px;
+
+  &:hover {
+    transition: background-color 0.2s;
+    background-color: black;
+    & .hoverButtonText {
+      color: white;
+      transition: color 0.2s;
+    }
+  }
+}
+
+.hoverButtonText {
+}
+
+.textContainer {
+}

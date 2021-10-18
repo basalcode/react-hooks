@@ -1,0 +1,23 @@
+.click {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button {
+  width: 100px;
+  height: 40px;
+
+  border: 1px solid black;
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  &:active {
+    background-color: black;
+    color: white;
+  }
+}
+
+.textContainer {
+}
