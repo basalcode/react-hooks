@@ -1,0 +1,19 @@
+.network {
+  display: flex;
+  justify-content: center;
+}
+
+.text {
+  margin-right: 10px;
+}
+
+.status {
+}
+
+.status_online {
+  color: lightseagreen;
+}
+
+.status_offline {
+  color: lightpink;
+}
