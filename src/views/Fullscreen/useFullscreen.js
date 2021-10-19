@@ -1,11 +1,14 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
 export const useFullscreen = (callback) => {
+    const [isFullscreen, setIsFullscreen] = useState();
     const element = useRef();
 
     const runCallback = isFull => {
         if (callback && typeof callback === "function") {
-            callback(true);
+
+            callback(isFull);
+            setIsFullscreen(isFull);
         }
     }
 
@@ -41,5 +44,5 @@ export const useFullscreen = (callback) => {
         runCallback(false)
     }
 
-    return { element, triggerFullScreen, exitFullScreen };
+    return { element, triggerFullScreen, exitFullScreen, isFullscreen };
 }

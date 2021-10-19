@@ -1,0 +1,41 @@
+.fullscreen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  width: 50%;
+}
+
+.title {
+}
+
+.full_title {
+  color: white;
+}
+.normal_title {
+  color: black;
+}
+
+.button {
+  width: 200px;
+  height: 40px;
+
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.selected {
+  background-color: lightgreen;
+  color: white;
+  border: none;
+}
+
+.fullscrren_button {
+}
+
+.exit_button {
+}
