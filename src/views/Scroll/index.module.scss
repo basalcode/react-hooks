@@ -1,0 +1,25 @@
+.scroll {
+  height: 200vh;
+}
+
+.text_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.title {
+  text-align: center;
+}
+
+.inside_border {
+  color: red;
+}
+
+.outside_border {
+  color: blue;
+}
