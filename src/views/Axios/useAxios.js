@@ -20,17 +20,18 @@ export const useAxios = (options, axiosInstance = defaultAixos) => {
 
     useEffect(() => {
         axiosInstance(options).then(data => {
-            console.log('datatatatat', data);
+            console.log('AAAAAAAAAA', data);
+
             setState({
                 ...state,
                 loading: false,
-                data
+                data: data
             });
         }).catch(error => {
             setState({
-                loading: false,
                 ...state,
-                error
+                loading: false,
+                error: error
             });
         });
     }, [trigger]);
