@@ -1,4 +1,7 @@
 .axios {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .title {
@@ -24,4 +27,5 @@
 }
 
 .movie_item {
+  text-align: center;
 }
